@@ -14,6 +14,16 @@
     --spacing-xl:32px;
     --spacing-xxl:40px;
     --spacing-xxxl:48px;
+
+    --border-primary-color : #333333;
+
+    --border-radius-xs : 4px;
+    --border-radius-sm : 8px;
+    --border-radius-md : 16px;
+    --border-radius-lg : 24px;
+    --border-radius-xl : 20px;
+    --border-radius-xxl : 24px;
+
 }
 
 html, body{
@@ -40,3 +50,8 @@ section{
     display: flex;
     justify-content: space-between;
  }
+
+.info{
+    padding : var(--spacing-sm) var(--spacing-md);
+    border : 1px solid var(--text-primary-color);
+}
