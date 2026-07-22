@@ -7,6 +7,13 @@
 :root{
     --bg-primary-color : #000;
     --text-primary-color : #fff;
+    --spacing-xs:4px;
+    --spacing-sm:8px;
+    --spacing-md:16px;
+    --spacing-lg:24px;
+    --spacing-xl:32px;
+    --spacing-xxl:40px;
+    --spacing-xxxl:48px;
 }
 
 html, body{
@@ -24,3 +31,12 @@ main,secion{
     width : 100%;
     height : 100%;
 }
+
+section{
+    padding : 40px;
+}
+ section .infos{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+ }
