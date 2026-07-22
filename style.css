@@ -4,16 +4,22 @@
     box-sizing : border-box;
 }
 
+html, body{
+    height : 100%;
+    width : 100%;
+}
+
 :root{
-    --bg-primary-color : #000;
-    --text-primary-color : #fff;
-    --spacing-xs:4px;
-    --spacing-sm:8px;
-    --spacing-md:16px;
-    --spacing-lg:24px;
-    --spacing-xl:32px;
-    --spacing-xxl:40px;
-    --spacing-xxxl:48px;
+    
+    --bg-primary-color : #0c0c0c;
+    --text-primary-color : #b9b9b9;
+    --space-xs:4px;
+    --space-sm:8px;
+    --space-md:16px;
+    --space-lg:24px;
+    --space-xl:32px;
+    --space-xxl:40px;
+    --space-xxxl:48px;
 
     --border-primary-color : #333333;
 
@@ -26,10 +32,7 @@
 
 }
 
-html, body{
-    height : 100%;
-    width : 100%;
-}
+
 
 html {
     background-color : var(--bg-primary-color);
@@ -37,21 +40,40 @@ html {
     font-family : system-ui, sans-serif;
 }
 
-main,secion{
+main, section{
     width : 100%;
     height : 100%;
 }
 
 section{
-    padding : 40px;
+    padding : var(--space-xxl);
+    display : flex;
+    flex-direction : column;
+    height : 100%;
+    gap : var(--space-lg);
 }
- section .infos{
+section .infos{
     width: 100%;
     display: flex;
     justify-content: space-between;
  }
 
 .info{
-    padding : var(--spacing-sm) var(--spacing-md);
-    border : 1px solid var(--text-primary-color);
+    padding : var(--space-sm) var(--space-md);
+    border : 1px solid var(--border-primary-color);
+    border-radius : var(--border-radius-sm);
+}
+
+.board{
+    border : 1px solid var(--border-primary-color);
+    flex-grow : 1;
+    display : grid;
+    grid-template-columns : repeat(auto-fill, 30px);
+    grid-template-rows : repeat(auto-fill, 30px);
+}
+
+.block{
+    width : 30px;
+    height : 30px;
+    border : 1px solid var(--border-primary-color);
 }
