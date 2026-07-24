@@ -13,6 +13,7 @@ html, body{
     
     --bg-primary-color : #0c0c0c;
     --bgfill-color : #c4c9c3;
+    --bg-food-color : #ff0303;
     --text-primary-color : #b9b9b9;
     --space-xs:4px;
     --space-sm:8px;
@@ -46,6 +47,18 @@ main, section{
     height : 100%;
 }
 
+.btn{
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
 section{
     padding : var(--space-xxl);
     display : flex;
@@ -77,8 +90,38 @@ section .infos{
     width : 30px;
     height : 30px;
     border : 1px solid var(--border-primary-color);
+    border-radius : 50%;
+    
 }
 
 .fill{
     background-color : var(--bgfill-color);
+}
+
+.food{
+    background-color : var(--bg-food-color);
+}
+
+.modal{
+    height : 100vh;
+    width : 100vw;
+    position : fixed;
+    top : 0;
+    background-color : #35353587;
+    backdrop-filter : blur(4px);
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+.modal .start-game,
+.modal .game-over{
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    gap : var(--space-lg);
+}
+
+.modal .game-over {
+    display : none;
 }
